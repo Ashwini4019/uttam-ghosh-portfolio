@@ -69,20 +69,21 @@ app.use((error, _req, res, _next) => {
   });
 });
 
-app.listen(config.port, async () => {
+app.listen(config.port, "0.0.0.0", async () => {
   if (serveWebsite) {
-    console.log(`Website, admin, and API running on http://localhost:${config.port}`);
+    console.log(`Website, admin, and API running on port ${config.port}`);
   } else {
-    console.log(`Newsletter API running on http://localhost:${config.port}`);
+    console.log(`Newsletter API running on port ${config.port}`);
   }
 
-  const emailStatus = await verifyEmailConfiguration();
-  if (emailStatus.ok) {
-    console.log(`[newsletter] Email ready via ${emailStatus.provider}`);
-  } else {
-    console.warn(`[newsletter] WARNING: ${emailStatus.message}`);
-    console.warn(
-      "[newsletter] Subscribers will be saved but welcome emails will NOT be delivered until email is configured."
-    );
+  try {
+    const emailStatus = await verifyEmailConfiguration();
+    if (emailStatus.ok) {
+      console.log(`[newsletter] Email ready via ${emailStatus.provider}`);
+    } else {
+      console.warn(`[newsletter] WARNING: ${emailStatus.message}`);
+    }
+  } catch (error) {
+    console.warn("[newsletter] Email check skipped:", error.message);
   }
 });

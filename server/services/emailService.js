@@ -115,7 +115,7 @@ function makeEtherealTransport(creds) {
 }
 
 async function getEtherealTransport({ forceNew = false } = {}) {
-  if (config.resendApiKey || getSmtpPassword()) {
+  if (!config.enableDevEthereal || config.resendApiKey || getSmtpPassword()) {
     return null;
   }
 
@@ -156,7 +156,8 @@ export function getLastEmailPreviewUrl() {
 export function getEmailProvider() {
   if (config.resendApiKey) return "resend";
   if (getSmtpUser() && getSmtpPassword()) return "smtp";
-  return "ethereal-dev";
+  if (config.enableDevEthereal) return "ethereal-dev";
+  return "none";
 }
 
 export function isRealEmailConfigured() {
