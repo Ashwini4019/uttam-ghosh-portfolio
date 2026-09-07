@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  width: 100%;
+  min-width: 100%;
+}
+
+:root {
+  --font-display-italic: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+#root {
+  width: 100%;
+  min-width: 100%;
+}
+
+.site-page {
+  width: 100%;
+  min-width: 100%;
+}
+
+.home-footer {
+  width: 100%;
+  background: #171717;
+  border-top: 3px solid #f59d28;
+  padding: 22px 48px;
+  text-align: center;
+}
+
+.home-footer p {
+  margin: 0;
+  color: #bfbfbf;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+#top,
+#work,
+#about,
+#contact {
+  scroll-margin-top: 88px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: clamp(24px, 3vw, 34px);
+  color: #222;
+  white-space: nowrap;
+}
+
+.section-heading .line {
+  flex: 1;
+  height: 1px;
+  background: #d6d6d6;
+  min-width: 24px;
+}
+
+@media (max-width: 768px) {
+  .home-footer {
+    padding: 18px 20px;
+  }
+
+  #top,
+  #work,
+  #about,
+  #contact {
+    scroll-margin-top: 78px;
+  }
+
+  .section-heading {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    font-size: 22px;
+    white-space: normal;
+    text-align: center;
+    width: 100%;
+  }
+
+  .section-heading .line {
+    display: none;
+  }
+}

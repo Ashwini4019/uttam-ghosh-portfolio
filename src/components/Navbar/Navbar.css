@@ -1,0 +1,250 @@
+.navbar {
+  width: 100%;
+  background: #171717;
+  border-bottom: 1px solid #252525;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 18px 48px;
+  position: relative;
+  z-index: 202;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: inherit;
+  min-width: 0;
+  justify-self: start;
+}
+
+.navbar-name {
+  grid-column: 2;
+  justify-self: center;
+  font-family: var(--font-display-italic);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(20px, 2.4vw, 32px);
+  color: #fff;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.navbar-name:hover {
+  color: #f59d28;
+}
+
+.navbar-end {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f59d28;
+  display: block;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(245, 157, 40, 0.25);
+}
+
+.logo-tagline {
+  color: #bfbfbf;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: #222;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-panel {
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links li {
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: inherit;
+}
+
+.nav-link-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  letter-spacing: inherit;
+}
+
+.nav-link-btn.active,
+.nav-links li.active {
+  color: #f59d28 !important;
+}
+
+.nav-backdrop {
+  display: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .logo-tagline {
+    font-size: 10px;
+  }
+}
+
+/* Mobile menu */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(100%, 320px);
+    height: 100vh;
+    height: 100dvh;
+    background: #171717;
+    border-left: 1px solid #2a2a2a;
+    padding: 88px 28px 32px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 201;
+    overflow-y: auto;
+  }
+
+  .nav-panel.open {
+    transform: translateX(0);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .nav-links a,
+  .nav-link-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-align: left;
+  }
+
+  .nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    border: none;
+    background: rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+  }
+
+  .logo-tagline {
+    display: none;
+  }
+
+  .logo-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .navbar-name {
+    font-size: clamp(18px, 5.4vw, 24px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 14px 16px;
+  }
+
+  .nav-panel {
+    width: 100%;
+    border-left: none;
+  }
+}

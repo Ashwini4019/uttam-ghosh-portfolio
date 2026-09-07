@@ -1,0 +1,66 @@
+.newsletter-status-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f3ece2;
+}
+
+.newsletter-status-card {
+  width: min(100%, 560px);
+  background: #fff;
+  border: 1px solid #e0d4c4;
+  border-radius: 18px;
+  padding: 36px 32px;
+  box-shadow: 0 16px 40px rgba(74, 63, 53, 0.1);
+  text-align: center;
+}
+
+.newsletter-status-eyebrow {
+  margin: 0 0 8px;
+  color: #8a5a28;
+  font-family: var(--font-display-italic);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+.newsletter-status-card h1 {
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1f1f1f;
+}
+
+.newsletter-status-text {
+  margin: 0 0 24px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.newsletter-status-text.success {
+  color: #2f6b3f;
+}
+
+.newsletter-status-text.error {
+  color: #a33;
+}
+
+.newsletter-status-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #1f1f1f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.newsletter-status-link:hover {
+  background: #333;
+}

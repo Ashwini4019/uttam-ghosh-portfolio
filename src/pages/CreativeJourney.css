@@ -1,0 +1,264 @@
+.creative-journey-page {
+  background: #121212;
+  min-height: 100vh;
+}
+
+.creative-journey {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 28px 96px;
+  color: #fff;
+}
+
+.cj-hero {
+  text-align: center;
+  margin-bottom: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.cj-eyebrow {
+  color: #f59d28;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.cj-hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+}
+
+.cj-roles {
+  margin: 0 0 24px;
+  color: #d3d3d3;
+  font-size: clamp(15px, 1.6vw, 18px);
+  letter-spacing: 0.04em;
+}
+
+.cj-philosophy {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  color: #f59d28;
+  font-size: clamp(18px, 2vw, 22px);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.cj-actions,
+.cj-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cj-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cj-btn.primary {
+  border: 2px solid #f59d28;
+  background: #f59d28;
+  color: #111;
+}
+
+.cj-btn.primary:hover {
+  background: #ffb347;
+  border-color: #ffb347;
+}
+
+.cj-btn.secondary {
+  border: 2px solid #555;
+  background: transparent;
+  color: #fff;
+}
+
+.cj-btn.secondary:hover {
+  border-color: #f59d28;
+  color: #f59d28;
+}
+
+.cj-section {
+  margin-bottom: 48px;
+}
+
+.cj-section h2 {
+  margin: 0 0 22px;
+  font-size: clamp(20px, 2.4vw, 26px);
+  color: #f59d28;
+  letter-spacing: 0.04em;
+}
+
+.cj-details {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.cj-details > div {
+  display: grid;
+  grid-template-columns: minmax(140px, 220px) 1fr;
+  gap: 10px 18px;
+  padding: 14px 16px;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cj-details dt {
+  color: #999;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cj-details dd {
+  margin: 0;
+  color: #e8e8e8;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.cj-jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cj-job {
+  padding: 24px;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cj-job-header h3 {
+  margin: 0 0 6px;
+  font-size: clamp(18px, 2vw, 22px);
+  color: #fff;
+  line-height: 1.3;
+}
+
+.cj-job-period {
+  margin: 0 0 14px;
+  color: #f59d28;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.cj-job-summary {
+  margin: 0 0 16px;
+  color: #c8c8c8;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.cj-job h4,
+.cj-highlight h4 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cj-job ul,
+.cj-collab-list {
+  margin: 0;
+  padding-left: 20px;
+  color: #c8c8c8;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.cj-job li + li,
+.cj-collab-list li + li {
+  margin-top: 6px;
+}
+
+.cj-highlight {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-left: 3px solid #f59d28;
+  border-radius: 0 10px 10px 0;
+  background: rgba(245, 157, 40, 0.08);
+}
+
+.cj-highlight p {
+  margin: 0 0 12px;
+  color: #d3d3d3;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.cj-highlight-label {
+  margin: 0 0 8px !important;
+  color: #f59d28 !important;
+  font-size: 12px !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cj-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cj-chip {
+  padding: 8px 14px;
+  border: 1px solid #3a3a3a;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #e0e0e0;
+  font-size: 13px;
+}
+
+.cj-footer {
+  margin-top: 24px;
+  padding-top: 36px;
+  border-top: 1px solid #2a2a2a;
+}
+
+.cj-job .rediff-link {
+  color: #f59d28;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .creative-journey {
+    padding: 32px 20px 72px;
+  }
+
+  .cj-details > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .cj-job {
+    padding: 18px;
+  }
+}
