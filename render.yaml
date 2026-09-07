@@ -9,17 +9,13 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      - key: NODE_VERSION
+        value: "22"
       - key: ENABLE_DEV_ETHEREAL
         value: "false"
       - key: NEWSLETTER_DOUBLE_OPT_IN
         value: "false"
       - key: VITE_ADMIN_PASSWORD
-        sync: false
+        value: uttam-admin
       - key: ADMIN_PASSWORD
-        sync: false
-      - key: SMTP_USER
-        sync: false
-      - key: SMTP_PASS
-        sync: false
-      - key: ADMIN_NOTIFY_EMAIL
-        sync: false
+        value: uttam-admin
